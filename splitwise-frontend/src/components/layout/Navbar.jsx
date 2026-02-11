@@ -64,13 +64,11 @@ export default function Navbar({ onDashboardClick }) {
 
       <nav className="sticky top-0 z-50 bg-slate-950/90 backdrop-blur-md border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 h-[72px] flex justify-between items-center">
-
-          {/* LOGO */}
+          
           <Link to="/" className="text-xl font-bold text-cyan-400">
             Split<span className="text-white">Wise</span>
           </Link>
 
-          {/* DESKTOP */}
           <div className="hidden md:flex gap-3 items-center">
             {!isAuth ? (
               <>
@@ -88,7 +86,7 @@ export default function Navbar({ onDashboardClick }) {
               </>
             ) : (
               <>
-                {/* DASHBOARD */}
+                
                 <Button
                   variant={isDashboard ? "secondary" : "ghost"}
                   onClick={() => {
@@ -138,7 +136,7 @@ export default function Navbar({ onDashboardClick }) {
             )}
           </div>
 
-          {/* MOBILE TOGGLE */}
+          /* {mobile ke liye} */
           <Button
             variant="ghost"
             size="icon"
@@ -149,7 +147,7 @@ export default function Navbar({ onDashboardClick }) {
           </Button>
         </div>
 
-        {/* MOBILE MENU */}
+        {/* Mobile Menu */}
         <div
           className={`md:hidden overflow-hidden transition-all duration-300 ${
             menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"

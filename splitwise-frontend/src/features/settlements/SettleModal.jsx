@@ -23,7 +23,6 @@ export default function SettleModal({ open, onClose, data, onConfirm }) {
   const [method, setMethod] = useState("cash");
   const [upiOpened, setUpiOpened] = useState(false);
 
-  // 🔥 Reset modal state when opened
   useEffect(() => {
     if (open) {
       setAmount(data?.amount || 0);

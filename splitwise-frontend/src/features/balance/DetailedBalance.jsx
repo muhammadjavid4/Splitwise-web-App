@@ -8,7 +8,6 @@ export default function DetailedBalance({
   return (
     <div className="mt-6 grid gap-6 md:grid-cols-2">
 
-      {/* 🔴 YOU OWE */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
         <h3 className="text-lg font-semibold mb-3 text-red-400">
           You Owe
@@ -34,7 +33,6 @@ export default function DetailedBalance({
                     ₹{item.amount}
                   </span>
 
-                  {/* ✅ SHADCN BUTTON (SAFE) */}
                   {onSettle && (
                     <Button
                       size="sm"
@@ -51,7 +49,6 @@ export default function DetailedBalance({
         )}
       </div>
 
-      {/* 🟢 YOU GET */}
       <div className="bg-slate-900 border border-slate-800 rounded-xl p-5">
         <h3 className="text-lg font-semibold mb-3 text-green-400">
           You Get

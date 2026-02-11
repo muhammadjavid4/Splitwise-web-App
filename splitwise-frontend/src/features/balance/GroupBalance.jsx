@@ -21,7 +21,6 @@ export default function GroupBalance({ groupId }) {
   const [settleOpen, setSettleOpen] = useState(false);
   const [selectedSettle, setSelectedSettle] = useState(null);
 
-  // ✅ MEMBERS QUERY
   const { data: membersData } = useQuery({
     queryKey: queryKeys.groupMembers(groupId),
     queryFn: async () => {
@@ -30,7 +29,6 @@ export default function GroupBalance({ groupId }) {
     },
   });
 
-  // ✅ BALANCE QUERY
   const { data, isLoading } = useQuery({
     queryKey: queryKeys.balance(groupId),
     queryFn: async () => {
@@ -39,7 +37,6 @@ export default function GroupBalance({ groupId }) {
     },
   });
 
-  // 👑 ADMIN CHECK + MEMBER MAP
   const memberMap = {};
   let isAdmin = false;
 

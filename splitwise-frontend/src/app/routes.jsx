@@ -7,8 +7,6 @@ import ProtectedRoute from "../components/common/ProtectedRoute";
 import GroupDetails from "../features/groups/GroupDetails";
 import Notifications from "../pages/Notifications";
 
-
-
 export default function AppRoutes() {
     return (
         <Routes>

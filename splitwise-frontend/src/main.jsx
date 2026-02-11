@@ -57,7 +57,6 @@ import { Toaster } from "react-hot-toast";
 
 document.documentElement.classList.add("dark");
 
-// ✅ Create client
 const queryClient = new QueryClient();
 
 ReactDOM.createRoot(document.getElementById("root")).render(

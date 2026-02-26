@@ -18,13 +18,34 @@
 //   );
 // }
 
-import AppRoutes from "./app/routes.jsx";
+// import AppRoutes from "./app/router.jsx";
+
+// export default function App() {
+//   return (
+//     <div className="min-h-screen">
+//       <AppRoutes />
+//     </div>
+//   );
+// }
+
+// import { Outlet } from "react-router-dom";
+
+// export default function App() {
+//   return (
+//     <div className="min-h-screen">
+//       {/* future me Navbar/Sidebar yaha aa sakta */}
+//       <Outlet />
+//     </div>
+//   );
+// }
+
+
+import { Outlet } from "react-router-dom";
 
 export default function App() {
   return (
     <div className="min-h-screen">
-      <AppRoutes />
+      <Outlet />
     </div>
   );
 }
-

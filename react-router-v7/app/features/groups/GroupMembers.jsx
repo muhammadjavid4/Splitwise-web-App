@@ -17,6 +17,7 @@ import GroupBalance from "../balance/GroupBalance";
 import useUserStore from "../../store/user.store";
 // import toast from "react-hot-toast";
 import { toast } from "sonner";
+import { useNavigate } from "react-router";
 
 import {
   Dialog,
@@ -44,6 +45,7 @@ export default function GroupMembers({ group, onUpdated }) {
   const [showExpense, setShowExpense] = useState(false);
   const [showTransfer, setShowTransfer] = useState(false);
   const [newAdminId, setNewAdminId] = useState("");
+  const navigate = useNavigate();
 
   const { data: members = [], isLoading } = useQuery({
     queryKey: queryKeys.groupMembers(group.id),
@@ -251,6 +253,13 @@ export default function GroupMembers({ group, onUpdated }) {
 
           <Button size="sm" onClick={() => setShowExpense(true)}>
             + Add Expense
+          </Button>
+          <Button
+            size="sm"
+            className="bg-indigo-500 hover:bg-indigo-600"
+            onClick={() => navigate(`/groups/${group.id}/analytics`)}
+          >
+            📊 Analytics
           </Button>
         </div>
 

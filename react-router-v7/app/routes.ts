@@ -27,6 +27,7 @@ export default [
     route("dashboard", "./routes/dashboard.tsx"),
     route("notifications", "./routes/notifications.tsx"),
     route("groups/:groupId", "./routes/groups.$groupId.tsx"),
+    route("groups/:groupId/analytics", "./features/analytics/GroupAnalytics.jsx"),
   ]),
 
 ] satisfies RouteConfig;

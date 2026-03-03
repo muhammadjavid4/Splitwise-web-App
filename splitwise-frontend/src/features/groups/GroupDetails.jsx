@@ -49,7 +49,7 @@ export default function GroupDetails() {
 
                 <GroupList
                   key={refresh}
-                  onSelect={() => {}}
+                  onSelect={() => { }}
                 />
               </CardContent>
             </Card>
@@ -71,6 +71,18 @@ export default function GroupDetails() {
 
                   <Button onClick={() => setShowAdd(true)}>
                     + Add Expense
+                  </Button>
+                </div>
+                <div className="flex gap-3">
+                  <Button onClick={() => setShowAdd(true)}>
+                    + Add Expense
+                  </Button>
+
+                  <Button
+                    variant="outline"
+                    onClick={() => navigate(`/groups/${groupId}/analytics`)}
+                  >
+                    📊 Analytics
                   </Button>
                 </div>
 

@@ -82,5 +82,6 @@ export default [
   layout("./components/common/ProtectedLayout.jsx", [
     route("dashboard", "./pages/Dashboard.jsx"),
     route("groups/:groupId", "./features/groups/GroupDetails.jsx"),
+    route("groups/:groupId/analytics", "./features/analytics/GroupAnalytics.jsx"),
   ]),
 ] satisfies RouteConfig;
